@@ -1,4 +1,4 @@
-function photographerTemplate(data) {
+function indexPhotographerTemplate(data) {
     const { name, portrait, id, city, country, tagline, price } = data;
 
     const picture = `assets/photographers/${portrait}`;
@@ -7,21 +7,21 @@ function photographerTemplate(data) {
 
         const img = document.createElement('img');
         img.setAttribute("src", picture)
-        img.setAttribute("alt", name)
+        //img.setAttribute("alt", name)
 
         const h2 = document.createElement('h2');
         h2.textContent = name;
 
         const location = document.createElement('p');
-        location.innerHTML = city + ", " + country
+        location.textContent = city + ", " + country
         location.setAttribute("class", "location")
 
         const tag = document.createElement('p');
-        tag.innerHTML = tagline
+        tag.textContent = tagline
         tag.setAttribute("class", "tag")
 
         const rate = document.createElement('p');
-        rate.innerHTML = price + "€/jour"
+        rate.textContent = price + "€/jour"
         rate.setAttribute("class", "rate")
 
         const link = document.createElement('a');

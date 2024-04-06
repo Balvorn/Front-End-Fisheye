@@ -7,6 +7,52 @@
     height: 300px;
     margin: 0 100px;
 }
+.photographer_header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+    margin-top: 100px;
+}
+
+.photographer_header article a {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photographer_header article a h2 {
+    color: #D3573C;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.photographer_header article a img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.photographer_header article p {
+    text-align: center;
+    font-weight: 400;
+}
+
+.location {
+    color: #901C1C;
+    font-size: 18px;
+}
+
+.tag {
+    font-size: 15px;
+}
+
+.rate {
+    font-size: 12px;
+    color: #757575;
+}
 
 .contact_button {
     font-size: 20px;
