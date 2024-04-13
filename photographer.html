@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/photographer.css" rel="stylesheet" type="text/css" />
   <meta charset="utf-8">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
@@ -15,10 +15,30 @@
     <img src="assets/images/logo.png" class="logo" />
   </header>
   <main id="main">
-    <div class="photograph-header">
+    <section class="photographer-header">
+      <div class="info">
+        <h1 id="name"></h1>
+        <p id="location"></p>
+        <p id="tagline"></p>
+      </div>
       <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+      <img id="picture">
+    </section>
+    <section class="medias-section">
+      <label for="medias-order">Trier par :</label>
+      <div class="box">
+      <select name="medias" id="medias-order" onchange="changeOrder(value)">
+        <option value="likes" selected>Popularité</option>
+        <hr>
+        <option value="date">Date</option>
+        <hr>
+        <option value="title">Titre</option>
+      </select>
     </div>
-    <div class="medias-section"></div>
+      <div class="medias-list">
+
+      </div>
+    </section>
   </main>
   <div id="contact_modal">
     <div class="modal">

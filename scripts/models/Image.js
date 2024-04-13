@@ -30,4 +30,7 @@ class Image {
     get price() {
         return this._price
     }
+    get type(){
+        return "img"
+    }
 }

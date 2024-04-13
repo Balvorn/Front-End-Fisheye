@@ -9,12 +9,9 @@ async function getData() {
 
 async function displayData(photographer, medias) {
 
-    const photographerSection = document.querySelector(".photograph-header");
-    const mediasSection = document.querySelector(".medias-section");
+    fillHeader(photographer)
 
-    const photographerModel = pagePhotographerTemplate(photographer);
-    const userCardDOM = photographerModel.getUserCardDOM();
-    photographerSection.appendChild(userCardDOM);
+    const mediasSection = document.querySelector(".medias-list");
 
     medias.forEach((media) => {
         const mediaModel = mediaTemplate(media);

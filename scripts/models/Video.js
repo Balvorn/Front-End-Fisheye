@@ -30,4 +30,7 @@ class Video {
     get price() {
         return this._price
     }
+    get type(){
+        return "video"
+    }
 }
