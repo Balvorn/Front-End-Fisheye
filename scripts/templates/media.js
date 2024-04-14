@@ -13,13 +13,20 @@ function mediaTemplate(data) {
 
         const like = document.createElement('p');
         like.textContent = likes
-        const icon = document.createElement('i')
         like.setAttribute("class", "likes")
+
+        const icon = document.createElement('i')
         icon.setAttribute("class", "fa-solid fa-heart")
-        like.appendChild(icon)
+
         const article = document.createElement('article');
         article.setAttribute("class", "media-card")
-        article.append(img, h2, like)
+
+        const link = document.createElement('a')
+        link.setAttribute("href","#")
+
+        like.append(icon)
+        link.append(img, h2, like)
+        article.append(link)
 
         return (article);
     }

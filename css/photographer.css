@@ -1,5 +1,8 @@
 @import url("reset.css");
 
+body {
+    font-family: "DM Sans", sans-serif;
+}
 
 header {
     display: flex;
@@ -164,19 +167,40 @@ form input {
 
 
 .medias-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,350px);
     gap: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
 }
 
-.media-card {
+.media-card a{
     width: 350px;
     height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #901C1C;
 }
 
 .media-card .media {
     height: 300px;
     width: 100%;
     object-fit: cover;
+    border-radius: 5px;
+}
+
+.media-card h2{
+    display: inline;
+    font-size: 24px;
+}
+.media-card p{
+    display: inline;
+    
+    font-size: 18px;
+    font-weight: 600;
+}
+.media-card .fa-solid{
+    margin-left: 5px;
 }
