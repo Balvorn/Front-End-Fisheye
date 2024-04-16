@@ -12,7 +12,8 @@
 
 <body>
   <header>
-    <img src="assets/images/logo.png" class="logo" />
+    <a href="./index.html" class="focusable"><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page" /></a>
+    
   </header>
   <main id="main">
     <section class="photographer-header">
@@ -21,13 +22,14 @@
         <p id="location"></p>
         <p id="tagline"></p>
       </div>
-      <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+      <button class="contact_button focusable" onclick="displayModal()">Contactez-moi</button>
       <img id="picture">
     </section>
     <section class="medias-section">
-      <label for="medias-order">Trier par :</label>
+      
       <div class="box">
-      <select name="medias" id="medias-order" onchange="orderBy(value)">
+      <label for="medias-order">Trier par :</label>
+      <select class="focusable" name="medias" id="medias-order" onchange="fillMedias(value)">
         <option value="likes" selected>Popularité</option>
         <hr>
         <option value="date">Date</option>

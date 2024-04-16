@@ -6,7 +6,7 @@ function mediaTemplate(data) {
         img.setAttribute("src", media)
         img.setAttribute("alt", `${title}, closeup view`)
         img.setAttribute("class", "media")
-
+        img.setAttribute("tabindex", "-1")
         const h2 = document.createElement('h2');
         h2.textContent = title;
         h2.setAttribute("class", "title")
@@ -23,7 +23,7 @@ function mediaTemplate(data) {
 
         const link = document.createElement('a')
         link.setAttribute("href","#")
-
+        link.setAttribute("class", "focusable")
         like.append(icon)
         link.append(img, h2, like)
         article.append(link)

@@ -26,6 +26,7 @@ function indexPhotographerTemplate(data) {
 
         const link = document.createElement('a');
         link.setAttribute("href", "photographer.html?id=" + id)
+        link.setAttribute("class", "focusable")
         link.append(img, h2);
 
         const article = document.createElement('article');

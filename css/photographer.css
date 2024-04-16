@@ -10,12 +10,12 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 90px;
+    margin-left: 100px;
 }
 
 
 .logo {
     height: 50px;
-    margin-left: 100px;
 }
 
 main {
@@ -142,7 +142,8 @@ form input {
 
 .box {
     position: relative;
-    width: 150px;
+    display: inline-block;
+    margin: 30px 0;
 }
 
 .box::after {
@@ -150,10 +151,10 @@ form input {
     font-family: FontAwesome;
     position: absolute;
     right: 15px;
-    text-align: center;
     font-size: 16px;
-    line-height: 45px;
     color: white;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #medias-order {
@@ -163,6 +164,7 @@ form input {
     width: 150px;
     font-size: 20px;
     border-radius: 5px;
+    margin-left: 25px;
 }
 
 
@@ -179,9 +181,11 @@ form input {
     height: 350px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     flex-wrap: wrap;
     color: #901C1C;
+    border-radius: 5px;
+
 }
 
 .media-card .media {
@@ -189,6 +193,7 @@ form input {
     width: 100%;
     object-fit: cover;
     border-radius: 5px;
+
 }
 
 .media-card h2{
@@ -203,4 +208,9 @@ form input {
 }
 .media-card .fa-solid{
     margin-left: 5px;
+}
+
+.focusable:focus-visible{
+    outline: 2px solid blue;
+    outline-offset: 4px;
 }
