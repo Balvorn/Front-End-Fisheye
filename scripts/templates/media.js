@@ -1,6 +1,6 @@
-function mediaTemplate(data) {
+import {medias} from "../pages/photographer.js";
+export default function mediaTemplate(data) {
     const { title, media, likes, type } = data;
-
     function getMediaDOM() {
         const img = document.createElement(type)
         img.setAttribute("src", media)
@@ -18,16 +18,12 @@ function mediaTemplate(data) {
         const icon = document.createElement('i')
         icon.setAttribute("class", "fa-solid fa-heart")
 
-        const article = document.createElement('article');
-        article.setAttribute("class", "media-card")
-
-        const link = document.createElement('a')
-        link.setAttribute("href","#")
-        link.setAttribute("class", "focusable")
+        let article = document.createElement('article');
+        article.setAttribute("tabindex", "0")
+        article.setAttribute("data-id",medias.indexOf(data))
+        article.setAttribute("class", "focusable media-card")
         like.append(icon)
-        link.append(img, h2, like)
-        article.append(link)
-
+        article.append(img, h2, like)   
         return (article);
     }
     return { getMediaDOM }

@@ -1,6 +1,8 @@
+import indexPhotographerTemplate from "../templates/index_photographer.js";
+
 async function getPhotographers() {
 
-    const response = await fetch("https://raw.githubusercontent.com/OpenClassrooms-Student-Center/Front-End-Fisheye/main/data/photographers.json");
+    const response = await fetch("../../data/photographers.json");
     const data = await response.json();
     const photographers = data.photographers
 

@@ -170,13 +170,13 @@ form input {
 
 .medias-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit,350px);
+    grid-template-columns: repeat(auto-fit, 350px);
     gap: 20px;
     justify-content: space-around;
     align-content: flex-start;
 }
 
-.media-card a{
+.media-card{
     width: 350px;
     height: 350px;
     display: flex;
@@ -196,21 +196,74 @@ form input {
 
 }
 
-.media-card h2{
+.media-card h2 {
     display: inline;
     font-size: 24px;
 }
-.media-card p{
+
+.media-card p {
     display: inline;
-    
+
     font-size: 18px;
     font-weight: 600;
 }
-.media-card .fa-solid{
+
+.media-card .fa-solid {
     margin-left: 5px;
 }
 
-.focusable:focus-visible{
+.focusable:focus-visible {
     outline: 2px solid blue;
     outline-offset: 4px;
+}
+
+#lightbox-modal {
+    position: fixed;
+    left: 5%;
+    right: 5%;
+    top: 5%;
+    bottom: 5%;
+    outline: 2px solid lightblue;
+    background-color: white;
+}
+
+#lightbox-modal button{
+    color: #901C1C;
+    width: 100px;
+    height: 100px;
+    justify-self: left;
+    font-size: 33px;
+}
+#lightbox-modal .left{
+    
+}
+#lightbox-modal .right{
+}
+#lightbox-modal .close{
+    font-size: 66px;
+}
+.lightbox-media{
+    max-width: 100%;
+    max-height: 90%;
+    
+}
+.lightbox-article {
+    opacity: 0;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.lightbox-article .title{
+    font-size: 33px;
+    font-weight: 600;
+}
+.active {
+    opacity: 1;
 }

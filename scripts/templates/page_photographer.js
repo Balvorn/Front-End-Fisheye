@@ -1,4 +1,4 @@
-function fillHeader(data) {
+export default function fillHeader(data) {
     const { name, portrait, city, country, tagline } = data;
 
     const picture = `assets/photographers/${portrait}`;

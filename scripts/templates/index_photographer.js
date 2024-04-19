@@ -1,4 +1,4 @@
-function indexPhotographerTemplate(data) {
+export default function indexPhotographerTemplate(data) {
     const { name, portrait, id, city, country, tagline, price } = data;
 
     const picture = `assets/photographers/${portrait}`;

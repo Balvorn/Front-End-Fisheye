@@ -22,14 +22,14 @@
         <p id="location"></p>
         <p id="tagline"></p>
       </div>
-      <button class="contact_button focusable" onclick="displayModal()">Contactez-moi</button>
+      <button class="contact_button open-contact focusable">Contactez-moi</button>
       <img id="picture">
     </section>
     <section class="medias-section">
       
       <div class="box">
       <label for="medias-order">Trier par :</label>
-      <select class="focusable" name="medias" id="medias-order" onchange="fillMedias(value)">
+      <select class="focusable" name="medias" id="medias-order">
         <option value="likes" selected>Popularité</option>
         <hr>
         <option value="date">Date</option>
@@ -41,31 +41,40 @@
       </div>
     </section>
   </main>
+  <dialog id="lightbox-modal">
+    <button class="left focusable">&#10094;</button>
+    <button class="right focusable">&#10095;</button>
+    <button class="close focusable">&times;</button>
+    <div id="lightbox-list"></div>
+  </dialog>
   <div id="contact_modal">
     <div class="modal">
       <header>
         <h2>Contactez-moi</h2>
-        <img src="assets/icons/close.svg" onclick="closeModal()" />
+        <button class="focusable close-contact"><img src="assets/icons/close.svg"/></button>
       </header>
       <form>
         <div>
           <label>Prénom</label>
           <input />
         </div>
-        <button class="contact_button">Envoyer</button>
+        <button class="contact_button focusable">Envoyer</button>
       </form>
     </div>
   </div>
-  <script src="scripts/pages/photographer.js"></script>
 
-  <script src="scripts/templates/page_photographer.js"></script>
-  <script src="scripts/templates/media.js"></script>
-  <script src="scripts/factories/mediaFactory.js"></script>
+  <script type="module" src="scripts/factories/mediaFactory.js"></script>
 
-  <script src="scripts/models/Image.js"></script>
-  <script src="scripts/models/Video.js"></script>
+  <script type="module" src="scripts/models/Img.js"></script>
+  <script type="module" src="scripts/models/Video.js"></script>
 
-  <script src="scripts/utils/contactForm.js"></script>
+  <script type="module" src="scripts/pages/photographer.js"></script>
+  <script type="module" src="scripts/templates/page_photographer.js"></script>
+  <script type="module" src="scripts/templates/media.js"></script>
+  <script type="module" src="scripts/templates/lightbox_template.js"></script>
+
+  <script type="module" src="scripts/utils/contactForm.js"></script>
+  <script type="module" src="scripts/utils/lightbox.js"></script>
 </body>
 
 </html>
