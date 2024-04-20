@@ -8,7 +8,6 @@ export default function lightboxTemplate(data) {
         if (type === "video") {
             mediasrc.setAttribute("controls", "controls")
             mediasrc.setAttribute("autoplay", "autoplay")
-            mediasrc.setAttribute("autoplay", "autoplay")
             const source = document.createElement("source")
             source.setAttribute("src", media)
             source.setAttribute("type", "video/mp4")
@@ -19,15 +18,15 @@ export default function lightboxTemplate(data) {
         }
         mediasrc.setAttribute("class", "lightbox-media")
 
-        const h2 = document.createElement('h2');
+        const h2 = document.createElement('figcaption');
         h2.textContent = title;
         h2.setAttribute("class", "title")
 
-        const article = document.createElement('article');
-        article.setAttribute("class", "lightbox-article")
-        article.setAttribute("id", medias.indexOf(data))
-        article.append(mediasrc, h2)
-        return (article);
+        const figure = document.createElement('figure');
+        figure.setAttribute("class", "lightbox-article")
+        figure.setAttribute("id", medias.indexOf(data))
+        figure.append(mediasrc, h2)
+        return (figure);
     }
     return { getLightboxDOM }
 }

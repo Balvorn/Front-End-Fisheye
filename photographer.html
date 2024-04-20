@@ -41,27 +41,33 @@
       </div>
     </section>
   </main>
-  <dialog id="lightbox-modal">
-    <button class="left focusable">&#10094;</button>
-    <button class="right focusable">&#10095;</button>
-    <button class="close focusable">&times;</button>
+  <dialog id="lightbox-modal" aria-label="image closeup view">
+    <button class="left focusable" aria-label="previous image">&#10094;</button>
+    <button class="right focusable"aria-label="next image">&#10095;</button>
+    <button class="close focusable"aria-label="close dialog">&times;</button>
     <div id="lightbox-list"></div>
   </dialog>
-  <div id="contact_modal">
+  <dialog id="contact_modal" aria-labelledby="contact-photographer" >
     <div class="modal">
       <header>
-        <h2>Contactez-moi</h2>
-        <button class="focusable close-contact"><img src="assets/icons/close.svg"/></button>
+        <h2 id="contact-photographer">Contactez-moi <p class="photographer-name"></p></h2>
+        
+        <button class="focusable close-contact" aria-label="close contact form"><img src="assets/icons/close.svg"/></button>
       </header>
-      <form>
-        <div>
-          <label>Prénom</label>
-          <input />
-        </div>
-        <button class="contact_button focusable">Envoyer</button>
+      <form id="contact_form">
+          <label for="surname">Prénom</label>
+          <input type="text" name="surname" class="surname" aria-label="First name" required/>
+          <label for="lastname">Nom</label>
+          <input type="text" name="lastname" class="lastname" aria-label="Last name" required/>
+          <label for="mail">Email</label>
+          <input type="email" name="email" class="email" pattern="[\-\w\.]+@([\w]+\.)+[\w]{2,4}"  aria-label="Email" required/>
+          <label for="surname">Votre message</label>
+          <textarea type="text" name="message" class="message" aria-label="your message" required></textarea>
+        <button type="button" class="contact_button send_button focusable" aria-label="Send">Envoyer</button>
       </form>
     </div>
-  </div>
+  </dialog>
+
 
   <script type="module" src="scripts/factories/mediaFactory.js"></script>
 
