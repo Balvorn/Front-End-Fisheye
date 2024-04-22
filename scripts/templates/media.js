@@ -12,17 +12,20 @@ export default function mediaTemplate(data) {
         h2.setAttribute("class", "title")
 
         const like = document.createElement('p');
-        like.textContent = likes
-        like.setAttribute("class", "likes")
-
-        const icon = document.createElement('i')
+        const number = document.createElement('span')
+        number.textContent = likes
+        number.setAttribute("data-liked", "false")
+        like.setAttribute("class", "likes focusable")
+        like.setAttribute("tabindex", "0")
+        
+        const icon = document.createElement('span')
         icon.setAttribute("class", "fa-solid fa-heart")
 
         let article = document.createElement('article');
         article.setAttribute("tabindex", "0")
         article.setAttribute("data-id",medias.indexOf(data))
         article.setAttribute("class", "focusable media-card")
-        like.append(icon)
+        like.append(number,icon)
         article.append(img, h2, like)   
         return (article);
     }

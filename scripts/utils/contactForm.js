@@ -4,11 +4,11 @@ openBtn.addEventListener("click", displayModal)
 const closeBtn = document.querySelector(".close-contact")
 closeBtn.addEventListener("click", closeModal)
 
-const sendBtn = document.querySelector(".send_button")
+const contactForm = document.getElementById("contact_form")
 
-sendBtn.addEventListener("click", function(){
-    let form = document.getElementById('contact_form');
-    let data = new FormData(form);
+contactForm.addEventListener("submit", function(e){
+    e.preventDefault()
+    let data = new FormData(contactForm);
     for (let [key, value] of data) {
         console.log(key+" : "+  value)
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
   <link href="css/photographer.css" rel="stylesheet" type="text/css" />
@@ -52,18 +52,18 @@
       <header>
         <h2 id="contact-photographer">Contactez-moi <p class="photographer-name"></p></h2>
         
-        <button class="focusable close-contact" aria-label="close contact form"><img src="assets/icons/close.svg"/></button>
+        <button class="focusable close-contact" aria-label="close contact form"><img src="assets/icons/close.svg" alt="close dialog"/></button>
       </header>
       <form id="contact_form">
           <label for="surname">Prénom</label>
-          <input type="text" name="surname" class="surname" aria-label="First name" required/>
+          <input id="surname" type="text" name="surname" class="surname" aria-label="First name" required/>
           <label for="lastname">Nom</label>
-          <input type="text" name="lastname" class="lastname" aria-label="Last name" required/>
+          <input id="lastname"  type="text" name="lastname" class="lastname" aria-label="Last name" required/>
           <label for="mail">Email</label>
-          <input type="email" name="email" class="email" pattern="[\-\w\.]+@([\w]+\.)+[\w]{2,4}"  aria-label="Email" required/>
-          <label for="surname">Votre message</label>
-          <textarea type="text" name="message" class="message" aria-label="your message" required></textarea>
-        <button type="button" class="contact_button send_button focusable" aria-label="Send">Envoyer</button>
+          <input id="mail" type="email" name="email" class="email" pattern="[\-\w\.]+@([\w]+\.)+[\w]{2,4}"  aria-label="Email" required/>
+          <label for="message">Votre message</label>
+          <textarea id="message" type="text" name="message" class="message" aria-label="your message" required></textarea>
+        <button type="submit" class="contact_button send_button focusable" aria-label="Send">Envoyer</button>
       </form>
     </div>
   </dialog>

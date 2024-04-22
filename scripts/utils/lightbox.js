@@ -36,6 +36,20 @@ function HandleMediaEvent(e) {
         let article = e.target.closest("article")
         if (!article) return;
         if (!mediaslist.contains(article)) return;
+
+        //handle likes
+        let likes = e.target.closest("p")
+        if (likes && article.contains(likes)){
+            let number = likes.firstChild
+            if(number.dataset.liked === "true"){
+                number.setAttribute("data-liked", "false")
+                number.innerText = parseInt(likes.innerText)-1
+            }else{
+                number.setAttribute("data-liked", "true")
+                number.innerText = parseInt(likes.innerText)+1
+            }
+            return;
+        }
         console.log(article)
         openLightbox()
         showImage(article.dataset.id)
@@ -72,7 +86,6 @@ function right() {
     }
     showImage(++index);
 }
-
 
 // image control
 function showImage(currIndex) {

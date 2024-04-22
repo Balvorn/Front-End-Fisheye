@@ -229,11 +229,12 @@ form textarea{
     flex: 1;
 }
 
-.media-card p {
+.media-card .likes {
     display: inline;
     margin-left: 5px;
     font-size: 18px;
     font-weight: 600;
+    border-radius: 5px;
 }
 
 .media-card .fa-solid {
