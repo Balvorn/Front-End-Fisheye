@@ -50,7 +50,6 @@ function HandleMediaEvent(e) {
             }
             return;
         }
-        console.log(article)
         openLightbox()
         showImage(article.dataset.id)
     }
@@ -69,7 +68,6 @@ function closeLightbox() {
 
 // Next/previous controls
 function left() {
-    console.log(medias)
     document.getElementById(index).classList.remove("active")
     if (index <= 0) {
         index = medias.length
@@ -79,7 +77,6 @@ function left() {
 }
 
 function right() {
-    console.log(index)
     document.getElementById(index).classList.remove("active")
     if (index >= medias.length - 1) {
         index = -1

@@ -50,7 +50,7 @@
   <dialog id="contact_modal" aria-labelledby="contact-photographer" >
     <div class="modal">
       <header>
-        <h2 id="contact-photographer">Contactez-moi <p class="photographer-name"></p></h2>
+        <h2 id="contact-photographer">Contactez-moi</h2><p class="photographer-name"></p>
         
         <button class="focusable close-contact" aria-label="close contact form"><img src="assets/icons/close.svg" alt="close dialog"/></button>
       </header>
@@ -62,7 +62,7 @@
           <label for="mail">Email</label>
           <input id="mail" type="email" name="email" class="email" pattern="[\-\w\.]+@([\w]+\.)+[\w]{2,4}"  aria-label="Email" required/>
           <label for="message">Votre message</label>
-          <textarea id="message" type="text" name="message" class="message" aria-label="your message" required></textarea>
+          <textarea id="message" name="message" class="message" aria-label="your message" required></textarea>
         <button type="submit" class="contact_button send_button focusable" aria-label="Send">Envoyer</button>
       </form>
     </div>

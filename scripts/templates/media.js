@@ -4,7 +4,11 @@ export default function mediaTemplate(data) {
     function getMediaDOM() {
         const img = document.createElement(type)
         img.setAttribute("src", media)
-        img.setAttribute("alt", `${title}, closeup view`)
+        if(type =="img"){
+           img.setAttribute("alt", `${title}, closeup view`) 
+        }else{
+            img.setAttribute("title", `${title},video closeup view`) 
+        }
         img.setAttribute("class", "media")
         img.setAttribute("tabindex", "-1")
         const h2 = document.createElement('h2');
