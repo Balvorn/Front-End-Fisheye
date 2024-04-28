@@ -9,6 +9,7 @@ selectvalue.addEventListener("change", (event) => {
     fillMedias(event.target.value)
   });
 
+
 async function getData() {
     const response = await fetch("https://raw.githubusercontent.com/OpenClassrooms-Student-Center/Front-End-Fisheye/main/data/photographers.json");
     const data = await response.json();
@@ -20,6 +21,7 @@ async function getData() {
 async function displayData(photographer, order) {
     fillHeader(photographer)
     fillMedias(order)
+    fillInfos(photographer)
 }
 
 function fillMedias(value) {
@@ -46,6 +48,28 @@ function fillMedias(value) {
         const lightboxDOM = lightboxModel.getLightboxDOM()
         lightbox.appendChild(lightboxDOM)
     });
+}
+
+function fillInfos(photographer){
+    const fixedInfo = document.querySelector(".fixed-info")
+    fixedInfo.innerHTML = ""
+    const rateTag = document.createElement('p');
+    rateTag.textContent = photographer.price + "€ / jour"
+
+    const totalLikes = medias.reduce(
+        (accumulator, {likes}) => accumulator + Number(likes), 0)
+    
+    const number = document.createElement('span')
+    number.setAttribute("class", "total-likes-number")
+    number.textContent = totalLikes
+    
+    const icon = document.createElement('span')
+    icon.setAttribute("class", "fa-solid fa-heart") 
+
+    const likesTag = document.createElement('p');
+    likesTag.setAttribute("class", "total-likes")
+    likesTag.append(number,icon)
+    fixedInfo.append(likesTag,rateTag)
 }
 
 async function init() {

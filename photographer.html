@@ -12,8 +12,9 @@
 
 <body>
   <header>
-    <a href="./index.html" class="focusable"><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page" /></a>
-    
+    <a href="./index.html" class="focusable"><img src="assets/images/logo.png" class="logo"
+        alt="Fisheye Home page" /></a>
+
   </header>
   <main id="main">
     <section class="photographer-header">
@@ -26,43 +27,47 @@
       <img id="picture">
     </section>
     <section class="medias-section">
-      
+
       <div class="box">
-      <label for="medias-order">Trier par :</label>
-      <select class="focusable" name="medias" id="medias-order">
-        <option value="likes" selected>Popularité</option>
-        <hr>
-        <option value="date">Date</option>
-        <hr>
-        <option value="title">Titre</option>
-      </select>
-    </div>
+        <label for="medias-order">Trier par :</label>
+        <select class="focusable" name="medias" id="medias-order">
+          <option value="likes" selected>Popularité</option>
+          <hr>
+          <option value="date">Date</option>
+          <hr>
+          <option value="title">Titre</option>
+        </select>
+      </div>
       <div class="medias-list">
       </div>
     </section>
+    <div class="fixed-info"></div>
   </main>
   <dialog id="lightbox-modal" aria-label="image closeup view">
     <button class="left focusable" aria-label="previous image">&#10094;</button>
-    <button class="right focusable"aria-label="next image">&#10095;</button>
-    <button class="close focusable"aria-label="close dialog">&times;</button>
+    <button class="right focusable" aria-label="next image">&#10095;</button>
+    <button class="close focusable" aria-label="close dialog">&times;</button>
     <div id="lightbox-list"></div>
   </dialog>
-  <dialog id="contact_modal" aria-labelledby="contact-photographer" >
+  <dialog id="contact_modal" aria-labelledby="contact-photographer">
     <div class="modal">
       <header>
-        <h2 id="contact-photographer">Contactez-moi</h2><p class="photographer-name"></p>
-        
-        <button class="focusable close-contact" aria-label="close contact form"><img src="assets/icons/close.svg" alt="close dialog"/></button>
+        <h2 id="contact-photographer">Contactez-moi</h2>
+        <p class="photographer-name"></p>
+
+        <button class="focusable close-contact" aria-label="close contact form"><img src="assets/icons/close.svg"
+            alt="close dialog" /></button>
       </header>
       <form id="contact_form">
-          <label for="surname">Prénom</label>
-          <input id="surname" type="text" name="surname" class="surname" aria-label="First name" required/>
-          <label for="lastname">Nom</label>
-          <input id="lastname"  type="text" name="lastname" class="lastname" aria-label="Last name" required/>
-          <label for="mail">Email</label>
-          <input id="mail" type="email" name="email" class="email" pattern="[\-\w\.]+@([\w]+\.)+[\w]{2,4}"  aria-label="Email" required/>
-          <label for="message">Votre message</label>
-          <textarea id="message" name="message" class="message" aria-label="your message" required></textarea>
+        <label for="surname">Prénom</label>
+        <input id="surname" type="text" name="surname" class="surname" aria-label="First name" required />
+        <label for="lastname">Nom</label>
+        <input id="lastname" type="text" name="lastname" class="lastname" aria-label="Last name" required />
+        <label for="mail">Email</label>
+        <input id="mail" type="email" name="email" class="email" pattern="[\-\w\.]+@([\w]+\.)+[\w]{2,4}"
+          aria-label="Email" required />
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" class="message" aria-label="your message" required></textarea>
         <button type="submit" class="contact_button send_button focusable" aria-label="Send">Envoyer</button>
       </form>
     </div>

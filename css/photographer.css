@@ -237,7 +237,7 @@ form textarea{
     border-radius: 5px;
 }
 
-.media-card .fa-solid {
+.fa-solid {
     margin-left: 5px;
 }
 
@@ -312,6 +312,23 @@ form textarea{
     font-size: 24px;
     font-weight: 400;
     color: #901C1C;
+}
+
+.fixed-info{
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+    width: 250px;
+    height: 50px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #DB8876;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
 }
 
 .active {

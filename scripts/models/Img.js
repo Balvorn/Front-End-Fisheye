@@ -7,6 +7,7 @@ export default class Img {
         this._likes = data.likes
         this._date = data.date
         this._price = data.price
+        this._liked = false
     }
 
     get id() {
@@ -32,5 +33,16 @@ export default class Img {
     }
     get type(){
         return "img"
+    }
+    get liked(){
+        return this._liked
+    }
+    set liked(value){
+        this._liked = value
+        if(value){
+            this._likes+= 1
+        }else{
+            this._likes-= 1
+        }
     }
 }

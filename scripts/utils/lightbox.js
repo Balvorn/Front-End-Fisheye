@@ -2,7 +2,6 @@ import { medias } from "../pages/photographer.js";
 
 let index = 0
 
-const mediaslist = document.querySelector(".medias-list")
 const dialog = document.getElementById("lightbox-modal")
 const closeButton = document.querySelector(".close")
 const leftButton = document.querySelector(".left")
@@ -25,38 +24,8 @@ rightButton.addEventListener("click", () => {
     right()
 });
 
-
-//event delegation
-["click", "keyup"].forEach(ev => {
-    mediaslist.addEventListener(ev, HandleMediaEvent);
-});
-
-function HandleMediaEvent(e) {
-    if (e.type == "click" || e.key == "Enter") {
-        let article = e.target.closest("article")
-        if (!article) return;
-        if (!mediaslist.contains(article)) return;
-
-        //handle likes
-        let likes = e.target.closest("p")
-        if (likes && article.contains(likes)){
-            let number = likes.firstChild
-            if(number.dataset.liked === "true"){
-                number.setAttribute("data-liked", "false")
-                number.innerText = parseInt(likes.innerText)-1
-            }else{
-                number.setAttribute("data-liked", "true")
-                number.innerText = parseInt(likes.innerText)+1
-            }
-            return;
-        }
-        openLightbox()
-        showImage(article.dataset.id)
-    }
-}
-
 // Open the Modal
-function openLightbox() {
+export function openLightbox() {
 
     dialog.showModal()
 }
@@ -85,7 +54,7 @@ function right() {
 }
 
 // image control
-function showImage(currIndex) {
+export function showImage(currIndex) {
     index = currIndex
     document.getElementById(index).classList.add("active")
 }
